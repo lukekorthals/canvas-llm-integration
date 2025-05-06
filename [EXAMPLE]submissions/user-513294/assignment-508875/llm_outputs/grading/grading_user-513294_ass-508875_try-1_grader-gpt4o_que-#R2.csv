@@ -1,0 +1,2 @@
+user_id,assignment_id,attempt,grader,question,points,explanation
+513294,508875,1,gpt4o,#R2,0.75,Subtracting 0.25 points because the path does not end with the two specified folders .../r_course/week_1. Calculation: 1 - 0.25 = 0.75

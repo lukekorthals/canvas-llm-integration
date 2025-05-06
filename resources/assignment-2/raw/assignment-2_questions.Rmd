@@ -1,0 +1,295 @@
+---
+title: "Week 2"
+subtitle: Programming in Psychological Science
+output:
+  html_document:
+    toc: yes
+  word_document:
+    toc: yes
+  pdf_document:
+    toc: yes
+urlcolor: blue
+---
+
+
+### Assignment description
+Welcome back!
+
+Like last week, you will work on coding tasks coming from (R + Python) OR (R + advanced R).
+If you only submit a .R file on canvas, we assume you want to be graded on R + advanced R.
+If there is a .R file AND a python file, then you will be graded on R + Python.
+
+This week's assignment is worth 10 points (8 for R + 2 extra; 10% of your final course grade). You must work individually, but feel free to ask questions in class and on Slack! 
+
+It is extremely important to put comments in your script to show which of your code pieces belong to which task. Keep the code in order with the numbered tasks with comments like <br>
+#R 1<br> 
+#R 2<br>
+#P1<br>
+
+It is very normal to experience plenty of confusion have lots of questions while coding. If you are stuck, even after googling and trying various things, please ALWAYS contact us via Slack, no matter if you already did so many times. One thing that will get you quicker answers is providing the TA with code that they can copy paste into their R Studio to see the error you are struggling with. Only include code in private messages though. No code on public Slack channels, please.
+
+This week's assignment has various exercises that can be tackled in different ways. So if you want to use a different approach or package than your classmates, that is fine! We also do not mind what colors you pick for your plots or if font sizes and other design details differ.
+
+### R questions
+
+#R1
+
+Simulate realistic grades for the programming exam and show them in a histogram. Half points are possible in the exam :)
+
+#R2
+
+Make a scatterplot of the mean temperature measured at Schiphol Airport up to 2021. Put time on the x-axis and temperature (TAVG) on the y axis.
+The data can be loaded from here: https://raw.githubusercontent.com/hannesrosenbusch/PIPS_DATA/master/schiphol.csv
+
+#R3
+
+The day that the titanic sank was bad, mostly because it bolsters present-day misogyny with plots like this:
+
+```{r, eval=TRUE, echo=FALSE}
+library(titanic, warn.conflicts = FALSE)
+library(ggplot2, warn.conflicts = FALSE)
+ggplot(titanic_train, aes(fill= factor(Survived, labels = c("dead", "alive")), x=Sex))+
+  geom_bar() +
+  labs(fill = "How did it go?")
+```
+
+Can you recreate the barplot with the ggplot2 and titanic packages (dataset titanic_train has the passenger data)? Functions that might be useful are factor() and labs(fill = "my label").
+
+#R4
+
+Try out different themes from ggplot for the previous plot. 
+You can find ggplot's "complete themes" here:
+https://ggplot2.tidyverse.org/reference/ggtheme.html .
+Name one theme that you like and explain why you like it in ONE sentence. There are no right or wrong choices.
+
+#R5
+
+Improve this plot in three ways and list each improvement in an extremely short bullet point comment.
+
+```{r, eval=TRUE}
+plot(cars$speed, cars$dist)
+```
+
+
+#R6
+
+Use the built-in ChickWeight dataset and recreate this ggplot. Make sure the bars are shown in the same order as here. Notice that you have to compute the chickens' maximum weight before plotting.
+
+```{r, eval=TRUE, echo=FALSE}
+library(ggplot2, warn.conflicts = FALSE)
+library(dplyr, warn.conflicts = FALSE)
+data.frame(ChickWeight) %>%
+  group_by(Chick) %>%
+  filter(Chick %in% c('1', '20', '5', '40', '19')) %>%
+  summarise(max_weight = max(weight)) %>%
+  mutate(chick = factor(Chick, levels=c('1', '20', '5', '40', '19'))) %>%
+  ggplot() +
+  geom_bar(aes(chick, max_weight), stat = "identity")
+
+```
+
+#R7
+
+Recreate this ggplot with the cars dataset. 
+
+```{r, echo = FALSE, eval = TRUE}
+library(ggplot2, warn.conflicts = FALSE)
+library(dplyr, warn.conflicts = FALSE)
+data.frame(cars) %>%
+  ggplot() +
+  geom_point(aes(speed, dist)) +
+  geom_smooth(aes(speed, dist), method = 'loess', formula = 'y ~ x')
+```
+
+#R8
+
+Add a second plot next to the barplot from exercise 6 showing the development of the individual chickens over time. An easy way to do it is with the patchwork package but you can also use the par() function.
+
+```{r, eval=TRUE, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+par(mfrow = c(2,2))
+plot1 <- data.frame(ChickWeight) %>%
+filter(Chick %in% c('1', '20', '5', '40', '19')) %>%
+  group_by(Chick) %>%
+  summarise(max_weight = max(weight)) %>%
+  mutate(chick = factor(Chick, levels=c('1', '20', '5', '40', '19'))) %>%
+  ggplot() +
+  geom_bar(aes(chick, max_weight), stat = "identity")
+
+plot2 <- data.frame(ChickWeight) %>%
+  filter(Chick %in% c('1', '20', '5', '40', '19')) %>%
+  mutate(chick = factor(Chick, levels=c('1', '20', '5', '40', '19'))) %>%
+  ggplot() +
+  geom_line(aes(Time, weight, color = chick)) +
+  labs(color = "chick")
+
+plot1 + plot2
+
+```
+
+
+#R9
+
+Ever wondered if guinea pigs' teeth grow better when they take their vitamin C through orange juice rather than meds? Make a plot that answers this question with the ggstatsplot package using the ToothGrowth datset. Hint: when checking out the ggstatsplot package: this is a "between subject" comparison ;)
+
+#R10
+
+Recreate this movable 3D plot with the plotly package and the human body measurements (in inches) dataset. You can load it from
+https://raw.githubusercontent.com/hannesrosenbusch/PIPS_DATA/master/body.csv.
+
+If plotly's html plots don't show up in your RStudio (while also giving no error), try this:
+`htmlwidgets::saveWidget(myplot, "myplot.html")`
+
+`browseURL("myplot.html")`
+```{r, echo=FALSE, eval=TRUE}
+library(plotly, warn.conflicts = FALSE)
+df = read.csv("https://raw.githubusercontent.com/hannesrosenbusch/PIPS_DATA/master/body.csv")
+
+plot_ly(df, x = ~TotalHeight, 
+        y = ~HeadCircumference, 
+        z = ~ShoulderToWaist, 
+        opacity = 0.5,
+        type="scatter3d", mode = "markers")
+
+
+```
+
+
+#R11
+
+Create a gif file with this plot using the gganimate package. Maybe look up transition_reveal() in the process. You can get the data through the cran_downloads() function from the package cranlogs. The animation speed and other visual settings do not matter for grading. Set the values low to not challenge your computer too much. You might also need to download the gifski package for everything to look nice.
+
+```{r, echo=FALSE, eval=TRUE, warning=FALSE}
+# library(cranlogs)
+# library(ggplot2)
+# library(gganimate)
+# downloads <- cran_downloads(c("ggplot2", "plotly"), from = "2013-08-21", to = "2025-01-01")
+# p <- ggplot(downloads, aes(date, count, color = package)) + 
+#   geom_line() +
+#   theme_bw() +
+#   labs(y = "Package Downloads", title = "Package popularity over time")+
+#   transition_reveal(date)
+# pl = animate(p,  nframes = 200, fps = 10, width = 300, height = 300, end_pause = 70)
+# anim_save(
+#     filename = "animation.gif")
+```
+<img src="animation.gif"/>
+
+#R12
+
+Find and use the getSymbols and chartSeries functions to plot the price of a stock in 2024 (exclude all other years). Pick a stock that has increased its value in 2024. Write in 5 words or less what the plotted company does.
+
+#R13
+
+Define a function called plotstock which takes as arguments a stock symbol, a year, and a new file name. The function creates a plot of the given stock's price development in the given year, and saves the plot in a file with the given file name (argument to the function). Set defaults, so the function works without giving any arguments.
+
+#R14
+
+Look through your code for the first thirteen exercises. Try to improve the style of two solutions. Describe your edits here (in two lines of comments).
+
+#R15
+
+State in one sentence what the purpose of the code below is (running it and adding printouts helps) and list exactly five reasons why the code has very poor style (there are more). Do one reason per comment. Two or three words per reason should usually be enough.
+
+```{r, eval=TRUE, echo=TRUE}
+a <- "dog"
+b = "cat"
+v = function(x){
+xx <- strsplit(x, "", )[[1]]
+yy <- strsplit(b, "", )[[1]]
+lxx = length(xx)
+lyy = length(yy)
+v <- lxx == lyy
+if(v) return(T)
+}
+v(a)
+
+```
+
+#R16
+
+Construct this matrix with one line of code and a single function (one pair of parentheses): 
+
+```{r, echo=FALSE}
+print(matrix(1:9, 3, byrow= TRUE) * 1:3)
+```
+
+
+#R17
+
+Find the keyboard shortcut that automatically formats your highlighted R code nicely. Mention it in a comment, and use it from now on :)
+
+#R18
+
+Make a meme in RStudio about R coding. You can (but do not have to) use the memer package (installation requires install_github() function from the devtools package). Indicate in a comment whether you are fine with us posting the meme anonymously to the meme channel on Slack. The person contributing the meme getting most likes will get a repost + credit in the following years that this course is given! These are the winners from last year.
+
+2023:
+```{r, eval=TRUE, echo=FALSE}
+knitr::include_graphics("meme_2023.png")
+```
+
+ 
+ 
+2024:
+```{r, eval=TRUE, echo=FALSE}
+knitr::include_graphics("meme_2024.png")
+```
+
+### R advanced questions
+
+#Radv1
+
+Make some random art.
+Your code should produce a different piece of art when one changes the random seed atop your code.
+Only use built-in functions and/or ggplot.
+
+#Radv2
+
+Demonstrate the use of an R package that relates to one of your hobbies. State your hobby in a comment. If you don't have hobbies for which there are R packages, pretend that you have different hobbies, but have a good look around beforehand. A lot of niche packages are on github and can be installed with install_github(). 
+
+### Python questions
+
+#Python1
+
+Simulate uniformly distributed data between -10 and 10 and show them in a `plt.boxplot()` using matplotlib. Now create a `sns.violinplot()` with "jittered" data points using `sns.stripplot()` with the same data using the seaborn package. Make sure you can see the data points!
+
+Which one do you find more insightful for your data?
+
+#Python2
+
+The day that the titanic sank, was a bad day in many ways. 
+Using an informative plot, check whether a passenger's age was associated with their chance of survival.
+
+TIP:
+When reading in the titanic csv file please do not use a path pointing to a location on your computer like "documents/titanic.csv" but rather read the data directly from the web (e.g., here https://raw.githubusercontent.com/hannesrosenbusch/PIPS_DATA/master/titanic.csv). Otherwise it doesn't work on the laptop of your TA's.
+
+#Python3
+
+Load the tips dataset from the seaborn package. Make a scatter plot with `total_bill` on the x axis and `tip` on the y axis. Add a regression line to the plot. Label your x-axis and y-axis with the variable names in large font size.
+
+#Python4
+
+Let's analyze the quality of diamonds. Plot a heatmap showing all the correlations between the numeric variables in the diamonds dataset from seaborn. Next to the heatmap, add a `kdeplot` with carat on the x axis and price on the y axis.
+
+#Python5
+
+Make two versions of the same plot (choose your own data, but make sure that your code runs on the TA's laptop, so no local filepaths). One version should be uninformative, confusing, or somehow misformatted. The other one should show the same data in a much nicer way. You get a point if the TA is sure which one is which :)
+
+#Python6
+
+Look through your solutions from any previous Python exercises (this week or in previous weeks) where you wrote your own Python code. Improve style of of your code by following PEP8 (Python Enhancement Proposal 8). Write two comments, each one specifying one edit that improved coding style.
+
+#Python7
+
+Many conventions and style guidelines for Python code are universally accepted. However, sometimes there is controversy about "the best way to do things". Find one of these issues and state in two brief sentences which side you are on.
+
+#Python8
+
+Explain what you did to change his code to PEP8 and discuss how else you improved his code.
+
+```{python}
+def add(a,b):return(a + b)
+result1=add( 2,3); result2=4  *result1;print (result2)
+```

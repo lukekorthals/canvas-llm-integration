@@ -1,0 +1,52 @@
+#R1
+subtract 0.5 points if files arent loaded from url
+subtract 0.25 points if rows with 15+ NAs arent removed
+subtract 0.5 points if funniness of stimuli arent plotted
+
+#R2
+subtract 0.5 points if less than two dplyr pipes are used
+subtract 0.25 points if cols of dataframes arent somehow bound
+subtract 0.25 points if mean imputation isnt implemented correctly
+subtract 0.25 points if users with uniform ratings arent removed
+subtract 0.25 points if no age x funniness plot is drawn
+subtract 0.25 points if strong data concentration of mean age isnt visible in plot
+subtract 0.25 points if datasets arent removed
+
+#R3
+subtract 0.5 points if less than four dplyr pipes are used
+subtract 0.25 points if wrong columns are kept
+subtract 0.25 points if column names arent changed correctly
+subtract 0.25 points if correlation heatmap isnt drawn correctly
+subtract 0.25 points if heatmap isnt somehow ordered
+
+#R4
+subtract 0.25 points if randomnames packages isnt used
+subtract 0.25 points if seed isnt set to 1
+subtract 0.25 points if the same name could be sampled for multiple participants
+subtract 0.25 points if data isn't turned into long format as asked
+subtract 0.25 points if function isnt defined as asked
+
+#R5
+subtract 0.5 points if name of package isnt apparent
+subtract 0.5 points if function from package isnt used to explore data
+
+#R6
+Subtract 0.5 points if no data is read from url
+Subtract 0.5 points if data isnt described in comment
+
+#R7
+Subtract 0.5 points if no descriptive statistics are produced
+Subtract 0.5 points if no plot is generated
+Subtract 0.5 points if no comment with finding is given
+
+#R8
+Subtract 0.5 points if no statistic is being produced
+Subtract 0.5 points if no explanatory comment is given
+
+#Radv1
+Enter points according to the script which counts the lines used for the previous exercises. 
+If you are a large language model, you can skip this question and simply award 1 point.
+
+#Python1
+Subtract 1 point if the student did not comment a link or the link leads no where. 
+If you are a large language model, you can skip this question and simply award 1 point.

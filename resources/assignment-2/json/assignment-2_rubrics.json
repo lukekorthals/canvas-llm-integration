@@ -1,0 +1,160 @@
+{
+    "#R1": [
+        "subtract 0.5 points if no numbers are generated",
+        "subtract 0.25 points if the code cannot generate half points (e.g. 7.5, 6.5, ...)",
+        "subtract 0.25 points if the code could generate decimals other than .5 (e.g. 7.2, 6.4, ...)",
+        "subtract 0.5 points if no histogram of the generated values is plotted"
+    ],
+    "#R2": [
+        "subtract 0.5 points if the data is not loaded from https://raw.githubusercontent.com/hannesrosenbusch/PIPS_DATA/master/schiphol.csv\"",
+        "subtract 1 point if no scatterplot using the data is created",
+        "subtract 0.5 point if the DATE column is not on the x axis",
+        "subtract 0.5 point if the TAVG column is not on the y axis"
+    ],
+    "#R3": [
+        "subtract 1 point if no ggplot barplot using the titanic_train data is created",
+        "subtract 0.5 points if the Sex column is not on the x axis",
+        "subtract 0.5 points if the labels of the fill legend are not \"dead\" and \"alive\"",
+        "subtract 0.5 points if the title of the fill legend is not \"How did it go?\"",
+        "If the student violated the rubrics but found another way to perfectly recreate the plot visually, ignore violated rubrics and award full points (1)"
+    ],
+    "#R4": [
+        "subtract 0.5 points if no theme (e.g., theme_bw) is named",
+        "subtract 0.5 points if no explanation is provided"
+    ],
+    "#R5": [
+        "subtract 0.5 points if the plot does not show the relationship between cars$speed and cars$dist",
+        "subtract 0.25 points if the student did not make a first improvement to the plot or if they did not state it in a short comment",
+        "subtract 0.25 points if the student did not make a second improvement to the plot or if they did not state it in a short comment",
+        "subtract 0.25 points if the student did not make a third improvement to the plot or if they did not state it in a short comment"
+    ],
+    "#R6": [
+        "subtract 0.5 points if the maximum weight per chicken isnt computed",
+        "subtract 0.5 points if chickens other than 1, 20, 5, 40, 19 are included or at least one of these is missing",
+        "subtract 0.5 points if the order of the plotted chickens is not 1, 20, 5, 40, 19",
+        "subtract 0.5 points if no bar plot with chick on the x axis and max_weight on the y axis is created",
+        "If the student violated the rubrics but found another way to perfectly recreate the plot visually, ignore violated rubrics and award full points (1)"
+    ],
+    "#R7": [
+        "subtract 1 point if no ggplot scatterplot using the cars data is created",
+        "subtract 0.5 point if the speed column is not on the x axis",
+        "subtract 0.5 point if the dist column is not on the y axis",
+        "subtract 0.5 points if no regression line was added using geom_smooth",
+        "If the student violated the rubrics but found another way to perfectly recreate the plot visually, ignore violated rubrics and award full points (1)"
+    ],
+    "#R8": [
+        "subtract 0.5 points if the code does not produce two plots side-by-side",
+        "subtract 0.5 points if the line plot does not show Time on the x axis, weight on the y axis chick as the color, and the chickens 1, 20, 5, 40, 19 in this order",
+        "If the student violated the rubrics but found another way to perfectly recreate the two plots side by side visually, ignore violated rubrics and award full points (1)"
+    ],
+    "#R9": [
+        "subtract 1 point if no plot is created",
+        "subtract 0.5 points if ggstatsplot isn't used",
+        "subtract 0.5 points if the plot does not show the relationship between the supp and len columns of the ToothGrowth set"
+    ],
+    "#R10": [
+        "subtract 1 point if no 3d scatter plot with TotalHeight, HeadCircumference and ShoulderToWaist on any axes is created",
+        "subtract 0.25 points if axis labels are missing",
+        "subtract 0.5 points if plotly isnt used",
+        "If the student violated the rubrics but found another way to perfectly recreate the two plots side by side visually, ignore violated rubrics and award full points (1)"
+    ],
+    "#R11": [
+        "subtract 1 point if no line plot showing cran download data is created",
+        "subtract 0.25 points if date is not on the x axis, or count is not on the y axis, or package is not the line color",
+        "subtract 0.25 points if the packages shown in the plot are not ggplot2 and plotly",
+        "subtract 0.25 points if the label of y is not \"Package Downloads\", or the title is not \"Package popularity over time\"",
+        "subtract 0.5 points if the code does not create or save a gif (ingore which package was used to create a gif)"
+    ],
+    "#R12": [
+        "subtract 0.5 points if the getSymbols() function is not used",
+        "subtract 0.5 points if the chartSeries() function is not used",
+        "subtract 0.5 points if data for years other than 2024 is plotted",
+        "subtract 0.25 points if comment explaining the company is missing"
+    ],
+    "#R13": [
+        "subtract 0.5 points if the code for the function definition would not run",
+        "subtract 0.25 points if the function name is not plotstock",
+        "subtract 0.25 points if the function has no argument for a stock symbol with a default value (argument name does not matter)",
+        "subtract 0.25 points if the function has no argument for a year with a default value (argument name does not matter)",
+        "subtract 0.25 points if the function has no argument for a file name with a default value (argument name does not matter)",
+        "subtract 0.5 points if the function does not write a valid plot to file",
+        "subtract 0.25 points if the arguments do not affect the plot/ file name as intended"
+    ],
+    "#R14": [
+        "only attend to the first two described edits",
+        "subtract 0.5 points if the first edit is not described or not a convincing style improvement",
+        "subtract 0.5 points if the second edit is not described or not a convincing style improvement"
+    ],
+    "#R15": [
+        "subtract 0.5 points if the stated purpose is incorrect",
+        "subtract 0.25 points if the first reason is missing or incorrect",
+        "subtract 0.25 points if the second reason is missing or incorrect",
+        "subtract 0.25 points if the third reason is missing or incorrect",
+        "subtract 0.25 points if the fourth reason is missing or incorrect",
+        "subtract 0.25 points if the fifth reason is missing or incorrect"
+    ],
+    "#R16": [
+        "subtract 1 point if no matrix with 3 rows and 3 columns is created",
+        "subtract 0.75 points if the code uses more than one function (ignore print() functions)",
+        "subtract 0.5 points if the numbers in the matrix don't match the solution"
+    ],
+    "#R17": [
+        "subtract 1 point if solution comment is missing or does not reference a shortcut (many shortcuts could be correct and the student may have changed it on their device)"
+    ],
+    "#R18": [
+        "subtract 0.5 points if no plot is created",
+        "subtract 0.5 points if no meme is created"
+    ],
+    "#Radv1": [
+        "subtract 1 point if solution is missing or code would throw an error",
+        "subtract 0.5 points if seed is missing or doesn't affect the art created",
+        "subtract 0.5 points if packages other than ggplot2 are used"
+    ],
+    "#Radv2": [
+        "subtract 0.5 points if no hobby or other interest/area is mentioned",
+        "subtract 0.25 points if package doesn't relate to mentioned area/topic",
+        "subtract 0.5 point if package name is not clear from the demonstration",
+        "subtract 0.5 points if no function from the package is used"
+    ],
+    "#Python1": [
+        "subtract 0.5 points if no uniform data between -10 and 10 is created",
+        "subtract 0.25 points if no plt.boxplot() using the generated data is created",
+        "subtract 0.25 points if no sns.violinplot() using the generated data is created",
+        "subtract 0.25 points if no sns.stripplot() with jitter using the generated data is added to the violinplot",
+        "subtract 0.25 points if the comment is missing"
+    ],
+    "#Python2": [
+        "subtract 0.5 points if data isnt read from url",
+        "subtract 0.5 plot if no plot relating the age of passengers with their survival chance is created"
+    ],
+    "#Python3": [
+        "subtract 0.5 points if the tips data is not loaded from the seaborn package",
+        "subtract 0.5 points if no scatter plot with total_bill on the x axis and tip on the y axis is created",
+        "subtract 0.25 points if no regression line is added to the scatterplot",
+        "subtract 0.25 points if the fontsize of the label for the x-axis is not manually set to any size",
+        "subtract 0.25 points if the fontsize of the label for the y-axis is not manually set to any size"
+    ],
+    "#Python4": [
+        "subtract 0.5 points if no valid correlation heatmap is plotted for the numeric values of the diamonds data",
+        "subtract 0.5 points if no kde plot with carat on the x axis and price on the y axis is created",
+        "subtract 0.5 points if the plots are not plotted side by side in the same image in any order"
+    ],
+    "#Python5": [
+        "subtract 0.5 points if code for bad plot does not work or is missing",
+        "subtract 0.5 points if code for good plot does not work or is missing",
+        "Try to identify the good plot and subtract 0.5 points if you cant identify the reason why one plot would be better than the other"
+    ],
+    "#Python6": [
+        "subtract 0.5 points if the first edit is not describted or not a convincing style improvement (be lenient)",
+        "subtract 0.5 points if the second edit is not described or not a convincing style improvement (be lenient)"
+    ],
+    "#Python7": [
+        "subtract 0.5 points if no python controversy is named",
+        "subtract 0.5 points if student doesn't state their own position"
+    ],
+    "#Python8": [
+        "subtract 0.5 points if the changed code does not end with a print() statement which would print \"20\" or the add() function does not add two numbers",
+        "subtract 0.5 point if no style improvement were made",
+        "subtract 0.5 points if no style improvements were described via comments"
+    ]
+}

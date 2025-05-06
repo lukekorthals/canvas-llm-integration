@@ -1,0 +1,32 @@
+The student had to solve this task:
+<task>
+{task}
+</task>
+
+
+This is one possible solution but there may be others:
+<example-solution>
+{solution}
+</example-solution>
+
+
+Grade this student answer:
+<student-answer>
+{answer}
+</student-answer>
+
+
+Strictly follow these rubrics for grading:
+<grading-rubrics>
+{rubric}
+</grading-rubrics>
+
+
+Format your response similar to this example:
+<formatting-example>
+<my-thoughts>
+- The code produces ... this matches rubric ...
+- But there is ...
+</my-thoughs>
+<explanation>Subtracting 0.25 points because [rubric reason]. Subtracting 0.25 points because [another rubric reason]. Calculation: 1 - 0.25 - 0.25 = 0.5</explanation><points>0.5</points>
+</formatting-example>

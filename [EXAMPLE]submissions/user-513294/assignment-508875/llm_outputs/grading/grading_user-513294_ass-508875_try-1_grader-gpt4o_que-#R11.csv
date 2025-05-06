@@ -1,0 +1,2 @@
+user_id,assignment_id,attempt,grader,question,points,explanation
+513294,508875,1,gpt4o,#R11,0.75,Subtracting 0.25 points because the vector is not sorted. Calculation: 1 - 0.25 = 0.75

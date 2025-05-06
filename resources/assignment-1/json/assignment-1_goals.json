@@ -1,0 +1,253 @@
+{
+    "#R1": [
+        "Working with built-in functions in R",
+        "Understanding the working environment in R"
+    ],
+    "#R2": [
+        "Working with built-in functions in R",
+        "Understanding the working environment in R"
+    ],
+    "#R3": [
+        "Working with built-in functions in R",
+        "Understanding the working environment in R"
+    ],
+    "#R4": [
+        "Understanding variables and data types in R",
+        "Performing statistical analysis or math in R"
+    ],
+    "#R5": [
+        "Reading and understanding code written in R",
+        "Understanding the working environment in R"
+    ],
+    "#R6": [
+        "Understanding variables and data types in R",
+        "Working with built-in functions in R"
+    ],
+    "#R7": [
+        "Understanding variables and data types in R",
+        "Working with simple data structures in R"
+    ],
+    "#R8": [
+        "Working with simple data structures in R",
+        "Working with built-in functions in R",
+        "Reading and understanding code written in R",
+        "Using help documentation in R",
+        "Performing statistical analysis or math in R"
+    ],
+    "#R9": [
+        "Installing and working with packages in R",
+        "Using help documentation in R",
+        "Understanding warning and error messages in R"
+    ],
+    "#R10": [
+        "Reading and understanding code written in R",
+        "Understanding variables and data types in R",
+        "Performing statistical analysis or math in R"
+    ],
+    "#R11": [
+        "Understanding variables and data types in R",
+        "Working with simple data structures in R",
+        "Indexing and subsetting in R",
+        "Simulating (reproducible) data in R"
+    ],
+    "#R12": [
+        "Working with built-in functions in R",
+        "Working with built-in data in R",
+        "Using help documentation in R"
+    ],
+    "#R13": [
+        "Reading and understanding code written in R",
+        "Understanding variables and data types in R",
+        "Understanding and performing logical operations in R"
+    ],
+    "#R14": [
+        "Working with built-in functions in R",
+        "Using help documentation in R",
+        "Googling to solve coding problems"
+    ],
+    "#R15": [
+        "Working with built-in functions in R",
+        "Understanding warning and error messages in R",
+        "Understanding variables and data types in R",
+        "Working with simple data structures in R",
+        "Performing statistical analysis or math in R"
+    ],
+    "#R16": [
+        "Understanding variables and data types in R",
+        "Working with built-in functions in R",
+        "Googling to solve coding problems",
+        "Performing statistical analysis or math in R"
+    ],
+    "#R17": [
+        "Understanding and working with variables and simple data types in R",
+        "Working with built-in functions in R",
+        "Performing statistical analysis or math in R"
+    ],
+    "#R18": [
+        "Working with complex data structures in R",
+        "Working with built-in functions in R",
+        "Simulating (reproducible) data in R"
+    ],
+    "#R19": [
+        "Reading and understanding code written in R",
+        "Working with complex data structures in R",
+        "Simulating (reproducible) data in R",
+        "Debugging code"
+    ],
+    "#R20": [
+        "Reading and understanding code written in R",
+        "Working with complex data structures in R",
+        "Working with built-in functions in R",
+        "Performing statistical analysis or math in R"
+    ],
+    "#R21": [
+        "Working with complex data structures in R"
+    ],
+    "#R22": [
+        "Understanding variables and data types in R",
+        "Working with complex data structures in R",
+        "Subsetting and indexing in R",
+        "Reading and understanding code written in R"
+    ],
+    "#R23": [
+        "Reading and understanding code written in R",
+        "Debugging code",
+        "Working with complex data structures in R",
+        "Working with built-in functions in R",
+        "Understanding variables and data types in R"
+    ],
+    "#R24": [
+        "Working with simple data structures in R",
+        "Working with built-in functions in R",
+        "Simulating (reproducible) data in R"
+    ],
+    "#R25": [
+        "Working with complex data structures in R",
+        "Working with built-in functions in R",
+        "Simulating (reproducible) data in R",
+        "Understanding variables and data types in R"
+    ],
+    "#R26": [
+        "Reading and understanding code written in R",
+        "Working with complex data structures in R",
+        "Performing statistical analysis or math in R"
+    ],
+    "#R27": [
+        "Working with complex data structures in R",
+        "Understanding variables and data types in R",
+        "Performing statistical analysis or math in R",
+        "Performing logical operations in R"
+    ],
+    "#R28": [
+        "Working with inbuilt data in R",
+        "Working with complex data structures in R",
+        "Reading and writing files in R",
+        "Using help documentation in R",
+        "Using inbuilt functions in R"
+    ],
+    "#R29": [
+        "Installing and working with packages in R",
+        "Simulating (reproducible) data in R"
+    ],
+    "#R30": [
+        "Reading and writing files in R",
+        "Working with complex data structures in R",
+        "Understanding variables and data types in R",
+        "Working with built-in functions in R",
+        "Performing statistical analysis or math in R"
+    ],
+    "#Radv1": [
+        "Understanding variables and data types in R",
+        "Working with simple data structures in R"
+    ],
+    "#Radv2": [
+        "Subsetting and indexing in R",
+        "Working with built-in data in R",
+        "Working with complex data structures in R"
+    ],
+    "#Radv3": [
+        "Installing and working with packages in R",
+        "Googling to solve coding problems"
+    ],
+    "#Radv4": [
+        "Understanding variables and data types in R",
+        "Working with complex data structures in R",
+        "Simulating (reproducible) data in R"
+    ],
+    "#Radv5": [
+        "Working with complex data structures in R",
+        "Working with built-in functions in R",
+        "Commenting and documenting code",
+        "Performing statistical analysis or math in R"
+    ],
+    "#Radv6": [
+        "Working with simple data structures in R",
+        "Commenting and documenting code",
+        "Understanding variables and data types in R"
+    ],
+    "#Radv7": [
+        "Googling to solve coding problems"
+    ],
+    "#Radv8": [
+        "Reading and writing files in R",
+        "Plotting and data visualization in R",
+        "Working with complex data structures in R"
+    ],
+    "#Python1": [
+        "Understanding variables and data types in Python",
+        "Reading and understanding code written in Python",
+        "Understanding communalities and differences between R and Python"
+    ],
+    "#Python2": [
+        "Installing and working with packages in Python",
+        "Understanding communalities and differences between R and Python"
+    ],
+    "#Python3": [
+        "Working with numpy and pandas in Python",
+        "Reading and understanding code written in Python",
+        "Understanding warning and error messages in Python",
+        "Debugging code"
+    ],
+    "#Python4": [
+        "Working with numpy and pandas in Python",
+        "Reading and understanding code written in Python",
+        "Debugging code",
+        "Understanding communalities and differences between R and Python",
+        "Understanding variables and data types in Python"
+    ],
+    "#Python5": [
+        "Working with numpy and pandas in Python",
+        "Reading and understanding code written in Python",
+        "Debugging code",
+        "Performing statistical analysis or math in Python"
+    ],
+    "#Python6": [
+        "Working with numpy and pandas in Python",
+        "Working with complex data structures in Python"
+    ],
+    "#Python7": [
+        "Working with numpy and pandas in Python",
+        "Using built-in functions in Python",
+        "Loops and list comprehensions in Python",
+        "Performing statistical analysis or math in Python",
+        "Working with simple data structures in Python",
+        "Understanding variables and data types in Python"
+    ],
+    "#Python8": [
+        "Working with numpy and pandas in Python",
+        "Working with complex data structures in Python",
+        "Working with built-in functions in Python",
+        "Understanding communalities and differences between R and Python"
+    ],
+    "#Python9": [
+        "Working with numpy and pandas in Python",
+        "Understanding variables and data types in Python",
+        "Understanding the working environment in Python"
+    ],
+    "#Python10": [
+        "Working with numpy and pandas in Python",
+        "Understanding variables and data types in Python",
+        "Working with simple data structures in Python",
+        "Simulating (reproducible) data in Python"
+    ]
+}

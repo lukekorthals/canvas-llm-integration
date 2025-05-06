@@ -1,0 +1,143 @@
+---
+title: "Week 4"
+subtitle: Programming in Psychological Science
+output:
+  html_document:
+    toc: yes
+  word_document:
+    toc: yes
+  pdf_document:
+    toc: yes
+---
+
+
+### Assignment description
+
+Once again, the R exercises are worth 8 points. The Python OR advanced R exercises can get you an additional 2 points. The total of assignment is worth 10% of your final course grade (just like the other assignments). You must work individually, but feel free to ask questions in class and on Slack! 
+
+You will notice that this assignment brings together a lot of the things from the previous assignments. This is supposed to serve as extra preparation for the exam. So working on the assignment means achieving two goals with one stone. Once you are done with these exercises, the rest of your R life (e.g., in the next stats course) will be smooth sailing :)
+
+### R
+
+#R1 
+
+Two mysterious dataset about the psychology of humor have been uploaded by an ominous researcher: LINK A: "https://raw.githubusercontent.com/hannesrosenbusch/PIPS_DATA/refs/heads/master/A.csv" & LINK B: "https://raw.githubusercontent.com/hannesrosenbusch/PIPS_DATA/refs/heads/master/B.csv" .
+Load them into R. Remember to not write local paths like "user/documents/data.csv" into your R script, because it is neither replicable nor gradeable. Next, get rid of all rows in dataset A which have more than 15 missing values. Then, examine how funny the different jokes (col: stimulus) in dataset B were rated by using a plot (doesn't have to be pretty but should be understandable for anyone seeing it).
+
+
+#R2
+
+First create a comment `# Loading the data (R1)` and copy your code from question R1 Below it. This is very important because the TA will grade you anonymously and question by question. So they need all your code to grade you!
+
+Then create a comment `# Combining the data (R2)` and complete the following tasks of R2 below it. 
+
+Use at least two dplyr pipe symbols for this exercise. Combine the previously loaded dataframes on top of each other. Notice that the variable age is missing in dataset B, fill in the values by imputing the mean value of that variable from dataset A. 
+
+Next, remove all users that gave the same funniness rating to all stimuli.
+
+Write code to make a simple plot that shows whether age is related to finding things funny. Make sure one can see that many values were imputed and thus there are tons of average age scores.
+
+Remove the datasets A and B. You just work with the combined data for the rest of the assignment.
+
+#R3
+
+First, copy all the code from R2 including the comments `# Loading the data (R1)` and `# Combining the data (R2)` and the copied code from R1 here. Again, this is very important because the TA can only give you full points for this question if you show the entire pipeline.
+
+Then create a comment `# Professional dataframe manipulation (R3)` and complete the following tasks of R3 below it.
+
+Time for some professional-level dataframe manipulation.
+Use at least four '%>%' symbols in this exercise.
+
+Make a new dataframe from the combined data in which you only keep one row per userID (e.g., the first one). Also, only keep the columns that measure people's mood (which all start with 'mood_'). Remove this "mood_" substring from those ten columns. Make a heatmap that shows the correlations between the mood variables but make sure that the columns are ordered in a way that shows their underlying structure. For instance, like this:
+
+![](heatmap.png)
+
+
+#R4
+
+First, copy all the code from R3 including the comments `# Loading the data (R1)`, `# Combining the data (R2)`, `# Professional dataframe manipulation (R3)` and the copied code from R1 and R2 here. Again, this is very important because the TA can only give you full points for this question if you show the entire pipeline.
+
+Then create a comment `# Long format and functions (R4)` and complete the following tasks of R4 below it.
+
+Give your new moods dataframe an ID variable, but instead of boring numbers use real names from the randomNames package (set the seed to 1).
+Next, turn the moods dataframe into a "long format" / tidy dataframe with the columns: id, mood dimension, and score (i.e., the df should now have 10 rows per user).
+Next, define a function that takes in an ID (string) and a dataframe (by default the long-format one you just created). The function searches for a name in the "id" column and throws an informative error when it cannot find it. Otherwise, it will return a message stating on which mood facet the user with the given name has the highest percentile score like so. For percentile scores one can, for example, use the function ecdf().
+
+```{r, eval= FALSE}
+
+mood_percentile("al-Farrah, Ali", mood_df)
+```
+[1] "al-Farrah, Ali scores the highest on mood:  determined  ( percentile: 61.9106699751861 )"
+
+#R5
+First, copy all the code from R4 including the comments `# Loading the data (R1)`, `# Combining the data (R2)`, `# Professional dataframe manipulation (R3)`, `# Long format and functions (R4)` and the copied code from R1, R2, and R3 here. Again, this is very important because the TA can only give you full points for this question if you show the entire pipeline.
+
+Then create a comment `# Dataset exploration (R5)` and complete the following task of R5 below it.
+
+Find an R package that does a lot of dataset exploration automatically with just a single function. Some of these functions even generate a report in a pdf file. Try it out on your data frame :)
+
+#R6
+
+Load a different dataset from a published scientific article/preprint/study that you find interesting from the internet.
+Make sure that your code should also work on the grader's laptops who doesn't have any datafiles stored. 
+The dataset should have at least 50 observations/rows and 4 variables.
+Good places to find data are osf.io and Github. 
+Look for interesting papers and check if they published their data (like good researchers obviously should).
+Write four sentences describing the data/study.
+
+#R7
+
+First create a comment `# Loading the data (R6)` and copy your code from question R6 Below it. This is very important because the TA will grade you anonymously and question by question. So they need all your code to grade you!
+
+THen create a comment `# Describing the data (R7)` and complete the following tasks of R7 below it.
+
+Now start describing the data with the help of code. Show the number of observations, demographics, variable distributions, missing values, correlations etc.
+Highlight the most interesting finding from your data exploration with a plot and a two-line comment.
+
+#R8
+
+First, copy all the code from R7 including the comments `# Loading the data (R6)` and `# Describing the data (R7)` and the copied code from R6 here. Again, this is very important because the TA can only give you full points for this question if you show the entire pipeline.
+
+Then create a comment `# Replication (R8)` and complete the following tasks of R8 below it.
+
+
+Replicate one of the statistics from the paper (p-value, model fit, Bayes factor, accuracy score...). 
+Provide a four line comment stating whether you succeeded to replicate the original finding, and if not state whether you think there is a bug in your code or in the authors' analyses ;)
+
+### R advanced
+
+#Radv1
+
+This week's advanced R section is one for the stylish and the concise.
+You do not need to write any new code for this assignment. Simply copy your entire code from R5 (including all the comments and copied code from R1, R2, R3, and R4) here. 
+
+To grade you, the teacher will then copy your code into a new script, add the following code chunk to the bottom of that script, save the file, and run it. 
+
+```{r, echo = TRUE, eval=FALSE}
+library(readr)
+library(rstudioapi)
+my_points <- function() {
+  path <- getSourceEditorContext()$path
+  code_lines <- read_lines(path)
+  code_lines <- code_lines[-grep(x = trimws(code_lines), pattern = '^#')]
+  code_lines <- code_lines[trimws(code_lines) != '']
+  nr_lines <- length(code_lines)
+  print(nr_lines)
+  points <- 0.05 * (120 - nr_lines)
+  points <- min(2, points)
+  points <- max(0, points)
+  return(points)
+}
+my_points()
+
+```
+
+The value returned by my_points() tells you how many points (out of 2) will be awarded for the advanced R assignment. Try to figure out what this code does and edit your code for tasks 1-5 accordingly.
+
+Clear style violations or poor functionality committed for the sake of brevity (e.g., long lines of code, a line with a function in a function in a function in a function (or deeper nesting), multiple assignments per line, uninformative variable names etc.) will lead to point deductions from the advanced R assignment. This advanced R assignment is supposed to lead to short, understandable, and beautiful code :)
+
+### Python
+
+#Python1
+
+Make a cool webapp and put the URL into a comment at the VERY TOP of your .py script. The .py file should include the code for your script. Check out streamlit for making simple Python webapps.

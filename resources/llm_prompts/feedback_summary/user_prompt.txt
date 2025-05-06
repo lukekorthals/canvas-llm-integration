@@ -1,0 +1,24 @@
+You gave this questionwise feedback to the student:
+<questionwise-feedback>
+{feedback}
+</questionwise-feedback>
+
+
+Format your response similar to this example:
+<formatting-example>
+<my-thoughts>
+- Considering all tasks, the student worked on ...
+- They are doing really well with ...
+- Their weaknesses are ...
+- This leads me to ...
+</my-thoughs>
+<summary>This week was all about `example-a`, `example-b`, ... Overall you are doing ...
+You're progressing well with R, especially in understanding `example-c` and `example-d`. However, you still seem to struggle a bit with  `example-e`, `example-d`, and `example-f`. Additionally, your code could benefit from `example-g`.  
+I recommend you to review the questionwise feedback, particularly questions `example_question_a`, `example_question_b`... I also recommend you to work on the following personalized coding challenge to refine your skills.</summary><coding-challenge>**Coding Challenge:**
+1. Get creative and write a short story using R code. 
+2. When your code runs, a user should be able to input something that will become part of the story (e.g., a name, a place, an object, etc.).
+3. Your story should be saved as a text file.
+4. Try loading and printing your story using Python code.
+5. Make sure to use short comments to explain your code to your future self. ;)
+    **Hint:** Definitely use Google! But avoid using large language models until you are really stuck.</coding-challenge>
+</formatting-example>

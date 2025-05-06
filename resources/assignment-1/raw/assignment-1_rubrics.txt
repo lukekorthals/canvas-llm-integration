@@ -1,0 +1,212 @@
+#R1
+Subtract 1 point if getwd is not used
+
+#R2
+subtract 1 point if setwd is not used
+subtract 0.25 points if the path does not end with the two specified folders  .../r_course/week_1
+
+#R3
+subtract 0.5 points if list.files is not used
+subtract 0.5 points if help or ? is not used for list.files
+
+#R4
+subtract 0.25 points if the variables are not called hours_sleep and reported_happiness
+subtract 0.25 points if hours_sleep is not assigned to 5 or reported_happiness is not assigned to "3" or if they did not try to add them
+subtract 1 point if the comment is missing or the explanation is wrong
+
+#R5
+subtract 0.5 points if code is not explained correctly
+subtract 0.5 points if stated number of variables is incorrect or missing
+
+#R6
+subtract 0.25 points for typos in variable names
+subtract 0.25 points if one of the requested lines is missing
+
+#R7
+subtract 0.5 points if the vector elements are not: 2, FALSE, -1.243, "test"
+subtract 0.5 points if the student does not mention the datatype as being "character" or "string"
+
+#R8
+subtract 1 point if the computed mean isn't correct
+subtract 1 point if the first line of code is changed
+
+#R9
+subtract 0.5 points if the fortunes package isn't mentioned (e.g. with library() or fortunes::)
+subtract 0.5 points if fortune() isn't used with a number between 1-12 or the name of a month (e.g., "april")
+
+#R10
+subtract 1 point if student doesn't explictly mention division by zero
+
+#R11
+the student can choose whatever distribution of grades (normal, uniform, sequential...) they like
+subtract 0.25 points if elements in vector are not sorted (incr or decr)
+subtract 0.5 points if no vector of length 100 is created
+subtract 0.5 points if no or incorrect elements are extracted
+
+#R12
+subtract 1 point if the student types out all the letters or if the solution is wrong
+The lower- and upper-case variables are both correct (letters or LETTERS)
+
+#R13
+subtract 1 point if the student does not identify the correct line (line 2)
+
+#R14
+subtract 1 point if the student's code does not replaces the "." with "a" (not assigning to the vector is fine)
+subtract 0.5 points if the student writes three or more lines of code
+
+#R15
+subtract 0.5 points if the student didn't attempt to change the datatypes
+subtract 0.5 points if the student's code does not produce the correct mean
+
+#R16
+subtract 0.5 points if variable definitions are wrong or missing
+subtract 0.5 points if the applied formula is wrong or missing
+
+#R17
+subtract 0.5 points if the generated vector does not contain the first 50 odd integers
+subtract 0.5 points if the product isn't computed correctly
+
+#R18
+subtract 0.25 points if seed is missing
+subtract 0.25 points if number of rows and columns isn't random
+subtract 0.25 points if matrix isn't filled with NAs (initializing empty also works)
+subtract 0.25 if dimensions aren't shown
+
+#R19
+subtract 0.5 points if code line isn't identified correctly
+subtract 0.5 points if student doesn't share some insights about function arguments
+
+#R20
+subtract 1 point if the student doesnt compute correct counts per participant
+
+#R21
+the student can choose any animals and they don't have to make sense
+the students dimnames may differ from the specified task
+subtract 0.5 points if the student doesnt make a 2x2x2 array
+subtract 0.5 points if the student doesn't specifiy dimension names
+
+#R22
+subtract 1 point if the student replaces any NAs in the intitial matrix definition
+subtract 0.5 points if the student doesn't use name-based indexing
+subtract 0.5 points if the student doesn't use position-based indexing
+do not subtract points if the student gets creative (e.g. putting "complicated" for a relationship)
+
+
+#R23
+subtract 0.5 points if more than two lines of code are added
+subtract 1 point if diagonal elements aren't changed successfully
+
+#R24
+subtract 0.75 points if rep isn't used
+subtract 1 point if solution doesn't work
+
+#R25
+typos in variable names or strings are fine
+values in the "Name" column may be fully typed out
+subtract 0.5 points if the student did not use shortcuts and instead explicitely typed each value for any of the three columns: "First_appearance", "Morality", or "Dateting_appeal"
+subtract 1 point if solution doesn't create the correct dataframe
+
+#R26
+subtract 0.25 points for wrong column name
+subtract 0.5 points if student added more than two lines of code (comments are fine)
+subtract 1 point if new column isn't computed correctly
+
+#R27
+subtract 1 point if the logical operation isn't done correctly
+
+#R28
+subtract 0.5 points if rownames aren't removed
+subtract 1 point if solution is incorrect
+
+#R29
+subtract 0.5 points if the quote > say pipeline isn't implemented
+subtract 0.5 points if the animal which says the quote isn't randomly selected
+
+#R30
+subtract 0.5 points if file isn't read via the url
+subtract 0.5 points if data indexing/filtering gives incorrect vectors
+subtract 0.5 points if t.test is missing
+
+#Radv1
+only consider the student's first four attempts at creating a vector
+subtract 0.25 points if the first vector is missing or incorrect 
+subtract 0.25 points if the second vector is missing or incorrect 
+subtract 0.25 points if the third vector is missing or incorrect 
+subtract 0.25 points if the fourth vector is missing or incorrect 
+subtract 0.5 points if the student did not show how to check the datatype of a vector
+
+#Radv2
+subtract 0.25 points if the student didn't successfully index any row
+subtract 0.25 points if the student didn't successfully index any column
+subtract 0.25 points if the student didn't successfully index any cell
+subtract 0.25 points if no built-in dataset is used
+
+#Radv3
+install.packages() function can be missing
+subtract 0.5 point if library() is being used
+subtract 0.5 points if no trick like :: is being used
+subtract 1 point if no (allegedly new) function is used
+
+#Radv4
+subtract 0.5 points if binary variable isn't created
+subtract 0.5 points if continuous variable isn't created
+subtract 0.5 points if simulation of continuous variable doesnt imply group differences
+
+#Radv5
+subtract 0.5 points if no comments are provided
+subtract 0.5 points if missing values are not imputed
+subtract 1 point if is.na isnt used
+
+#Radv6
+subtract 1 point if the code does not create a list with named elements
+subtract 0.5 points if the reason for using a list is not compelling
+
+#Radv7
+subtract 0.5 points if link is missing
+subtract 0.5 points if reason isn't given or is fully incoherent
+
+#Radv8
+subtract 0.5 points if no dataset is read from url
+subtract 0.5 points if no plot is created
+
+#Python1
+subtract 0.25 point if as.numeric is given instead of as.integer
+subtract 1 point if neither as.numeric nor as.integer is given
+
+#Python2
+subtract 0.5 points if pandas is not installed
+subtract 0.5 points if numpy is not installed
+
+#Python3
+subtract 1 point if import numpy as np is not added above the code
+
+#Python4
+subtract 0.5 points if more than one line of code is changed substantially
+subtract 1 point if no proper copy is made
+
+#Python5
+subtract 1 point if np.nan was manually removed from the first line of code
+subtract 1 point if the code does not compute the correct mean
+
+#Python6
+subtract 0.5 points if array does not have dimensions 4x3x5
+subtract 0.5 points if not all elements are zero
+
+#Python7
+subtract 0.5 points if the vector contains numbers other than the first 50 odd integers (dont subtract points if the vector has fewer than 50 odd integers)
+subtract 0.5 points if the code does not calculate the product of all elements in the vector
+
+#Python8
+typos in variable names or strings are fine
+subtract 0.5 points if one or more columns are fully typed out (except the names)
+subtract 1 point if solution doesn't create the correct dataframe
+
+#Python9
+subtract 0.5 points if filenamesof the current directory are not retrieved
+subtract 0.5 points if the filenames are not combined into one string (it does not matter how they are separated)
+
+
+#Python10
+subtract 0.25 points if the dictionary is not called my_measurements OR the first key is not called my_mood_measurements OR the second key is not called my_iq_measurements
+subtract 0.5 points if the values of the first key are not 365 binary values
+subtract 0.5 points if the values of the second key are not 52 normally distributed values

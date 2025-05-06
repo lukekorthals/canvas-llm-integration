@@ -1,0 +1,371 @@
+---
+title: "Week 3"
+subtitle: Programming in Psychological Science
+output:
+  html_document:
+    toc: true
+    df_print: paged
+  pdf_document:
+    toc: true
+urlcolor: blue
+---
+
+### Assignment description
+
+Work through the following R problems (8 points), and EITHER the advanced R exercises OR the Python exercises (2 points respectively). The total assignment is worth 10% of your final course grade.
+
+You must work individually, but feel free to ask questions in class and on Slack!
+
+Unstructured submissions or style violations that clearly compromise readability will lead to point deductions :)
+Place the code for the advanced R problem in the same .R file. If you choose Python instead of Advanced R, you should submit an extra .py file.
+
+The following packages could help you in your Python solutions.
+
+```{python, eval=FALSE}
+import numpy as np
+from datetime import datetime
+import time
+import warnings
+```
+
+### R
+
+#R1
+
+This programmer has apparently confused Python code with R code. Fix the code so that it runs in R.
+
+```{r, eval=FALSE}
+meryls_oscars = 3
+meryls_losses = 18
+best_actress = "Meryl Streep"
+if best_actress is "Meryl Streep":
+  meryls_oscars += 1
+else:
+  meryls_losses += 1
+```
+
+#R2
+
+Define the function `box_hist` which takes a numeric vector as its only argument and randomly plots either a boxplot or a histogram of the vector.
+
+#R3
+
+Create a comment "# old function" and copy your function definition from R2 below it. 
+Now create a comment "# new function". Below it define a function called `box_hist` which takes a numeric vector as its only argument and randomly plots either a boxplot or a histogram of the vector.   
+
+Importantly, the new function should use fewer lines of code, while ensuring that your function still does the same thing.
+
+
+#R4
+
+The Netherlands' head meteorologist wants to throw a birthday party tomorrow, so she asks one of her employees about the weather she can expect. The code below describes possible outcomes but it does not work quite as intended. Try out different scenarios to find, comment, and fix the problem.
+
+```{r, eval=FALSE}
+predicted <- "rain"
+actual <- "rain"
+employee_salary <- 54000
+
+if (actual == "sun"){
+    print("Yay! Birthday moved outside!")
+  } else if (predicted != actual) {
+    employee_salary <- employee_salary - 500
+  } else if (predicted == actual) {
+    employee_salary <- employee_salary + 500
+  } else if (actual == "high wind") {
+    print("Boss blew off her bike into a canal.")
+  }
+```
+
+#R5
+
+Does the code below test whether **any of** `my_numbers` are less than 0 (explain in comment)? If not,  change the code to do this. Note that you **must keep the if statement**.
+
+```{r, eval=FALSE}
+my_numbers <-  runif(100, min=-0.01, max=100)
+any_negative <-  FALSE
+if (my_numbers < 0) {
+  any_negative <- TRUE
+}
+```
+
+#R6
+
+Create an **if statement** that prints `Go to sleep!` if the (computer's system) time is between 00:00 (12am) and 05:00 (5am).
+
+#R7
+
+Read in the clinical data from here: <https://raw.githubusercontent.com/hannesrosenbusch/schiphol_class/master/Kaggle_Dataset_Mental_Disorders.csv>
+
+Make up a new psychological construct/scale that is a combination of the variables in the dataframe (e.g., Depletedness = 0.5 \* Sadness + 0.8 \* Exhausted). Combine AT LEAST three variables.
+
+Make a new boolean variable called Outlying which says whether people are outliers on your new construct. Use the `ifelse()` function and some made-up cut-off values to make the Outlying variable.
+
+#R8
+
+Write two for loops. The first loop should iterate over the columns of the dataframe from question 7 and print out the datatype of the current variable. It should skip the variable Sexual.Activity by saying: `Private information`.
+
+The second for loop should iterate over the rows of the dataframe and print the `Patient.Number` along with the string "assessed successfully". When you encounter a patient with NO `Authority Respect` and signs of `Aggressive Response`, print "Assessment postponed" and exit the for loop immediately.
+
+#R9
+
+The Earth is becoming overpopulated. Currently, world leaders are discussing whether to euthanize everyone with a CO2 footprint of \>120. Simulate the CO2 footprints of a city that has exactly 1000 people left AFTER the mass sacrifices (i.e., your data should consist of 1000 CO2 footprint values). For this task, you can assume that CO2 footprints before the sacrifices were normally distributed with a mean of 100 and a standard deviation of 15. Plot your city's 1000 footprint values in a ggplot2 histogram like this one:
+
+```{r, echo=F, eval=T, warning=F}
+set.seed(1)
+co2_values = c()
+while(length(co2_values) < 1000){
+  sample = 121
+  while(sample > 120){
+    sample = rnorm(1, 100, 15)
+  }
+  co2_values = c(sample, co2_values)
+}
+
+library(ggplot2)
+ggplot()+ geom_histogram(aes(co2_values)) + theme_bw() + labs(title = "1000 survivors")
+```
+
+Tip: There are packages to generate data from a truncated normal distribution. You are NOT allowed to use them, but you can check them out for inspiration.
+
+Tip2: Nested loops might be useful.
+
+#R10
+
+Create the vector `weird_fibonacci <- c(0, 3, 3, 12, 21, 57, 120, 291, 651, 1524)` by using the previous two elements to generate the next element (for example, by dividing the previous element by 2 and then subtracting that from the element two places ago -- this is not the answer) in a **for loop**. You can start with the vector `c(0, 3)`.
+
+#R11
+
+You're a scoundrel, a ne'er-do-good, a grifter, and most importantly a con-artist and professional gambler. Day after day, you hang out on Times Square, playing the classic Three Cups game and relieving passerbys of a few dollars to finance your various unhealthy habits.
+
+One day, an attractive, non-binary Manhattan therapist falls for one of your dirty card tricks. Unexpectedly, they take a liking to your quick-talking, witty mannerisms and offers you a free therapy session in exchange for the secret behind your trick. Surprisingly, even for yourself, you agree and whisper the scandalous explanation of the card trick into the therapist's ear. With a smile, they hand you their business card with the number of their practice, and walk away.
+
+Over the next days, you almost lose the courage to call them but when a bunch of New York teenagers react poorly to one of your jests, kick you in the stomach in a grimy alley, and steal your Cups and Balls game, you finally admit that you have to change something in your life. During the romantically-charged conversation on the therapist's couch, you come to realize that your classic scams and frauds are no longer fulfilling. You break down crying over your lost potential and the therapist consoles you.
+
+On your metro ride home, you stare at your pale reflection in the foggy window. You remember a younger version of yourself, living in Amsterdam, riding your bicycle, and learning how to reveal the world's most profound truths through data simulation.
+
+Suddenly you sit up straight. There it is--your big idea--the one purpose that your whole life has prepared you for. You will design a simple dice game which entices gamblers like no other game ever has. A game that *looks* attractive to the player, but ultimately pays *you*. Leaning back with an anticipatory grin, you write "The House always wins" onto the window. This is a clever pun, because, in this story, your last name is "House".
+
+The next day, you pawn your old, greasy microwave and manage to get enough funds for on an outdated laptop. You plug in the power cord, switch on the screen, and start thinking. You were never good at maths, so you should probably simulate a lot of dice throws, just to be sure that your new game is really profitable. And you should probably estimate the expected pay-out for a thousand games. Yes, that number would allow you some financial planning, maybe even enough to invite the therapist to that new pizza place they mentioned. And you need to come up with good name for your game. Yes, a good name will certainly draw in the masses.
+
+#R12
+
+`max()` finds the maximum of a vector. Below, we tried to do almost the same. However we also want the code to return the same number multiple times if multiple elements are the same maximum. However our code does not work! Can you fix the code (without using `max()`)?
+
+```{r, eval=FALSE}
+these_numbers <- c(1, 3.1, 5.2, -1, 5.2)
+maximum <- numeric()
+for (i in 1:length(these_numbers) ) {
+  if (sum(these_numbers > i) == 0) {
+    maximum <- c(maximum, these_numbers[i])
+  }
+}
+```
+
+#R13
+
+Create a while loop that tells you the time every 30 minutes, and doesn't end until 2040. **Warning: you should know how to end ongoing computation because a successful answer will not stop until 2040!**
+
+#R14
+
+The code below simulates a Verhulst equation that describes the growth of rabbits over time (where the variable `rabbits` represents 1000 rabbits). Observe that in the code above we created our own **function** in one line. We can also create a **for loop** in one line. Notice the confusing lack of curly brackets. Rewrite the **function** and **for loop** so that they both have multiple lines with indentations and brackets.
+
+```{r, eval=FALSE}
+verhulst <- function(x, rate_in, cap) rate_in*x*(cap-x)/cap
+rabbits <- c(.001)
+rate <- 2
+capacity <- 1000
+for (time in 2:50) rabbits[time] <- verhulst(rabbits[time-1], rate, capacity)
+plot(rabbits, type='l', xlab='time', bty='n')
+```
+
+#R15
+
+Using an explicit *for loop*, make a three dimensional `array` of 4 by 50 by 3. The first and last dimensions should contain normal random numbers with a standard deviation of a 1 and a mean given by the **middle dimension index**. For example, 12 numbers are placed into `array[, 30, ]` drawn from an normal distribution with mean = 30 and sd = 1. See `?rnorm`.
+
+#R16
+
+Create a comment "# my 3d array from R15". Below it, copy the code to create the array from R15.
+
+Now create a comment "# calculating minimum values". Below it, write code to calculate the minimum value in 4 unique arrays (first dimension) of 50 by 3 matrices (2nd and 3rd dimensions). Use an **implicit loop** and use only one line of code. Hint: see `?apply`.
+
+#R17
+
+Copy this code block.
+
+```{r, eval=FALSE}
+what_do <- switch(caught_fish,
+                        large_trout = "eat",
+                        small_trout = "return",
+                        carp = ,
+                        perch = "sell")
+print(what_do)
+```
+
+(a) What is the variable `what_do` when `caught_fish` is `"shoe"`? Why?
+
+(b) What string(s) can `caught_fish` be so that `what_do` is `"sell"`? Why? Read the help file for the function `switch`.
+
+#R18
+
+```{r, eval=FALSE}
+mcfly <- function(my_list) {
+  print("Great Scott! Erased from existence!")
+  rm(list = my_list, pos = 1)
+}
+mcfly('mcfly')
+```
+
+What does this code show us about the arguments of the `rm()` function?
+
+#R19
+
+```{r, eval=FALSE}
+t_tests <- replicate(100, t.test(rbeta(10, shape1=2, shape2=2), mu=.5), simplify = FALSE)
+```
+
+Within the list `t_tests` you will find a complex list structure. Can you extract the 100 p.values and put them in a vector?
+
+Hint: Check out the inner attributes of ONE t_test result to learn about the names of the elements and the required indexing for extracting the p value. Then, check out the use of in-line functions within `sapply`.
+
+#R20
+
+Write a simple function and then show an example of how to use `debug()`. See the help file of `debug`.
+
+#R21
+
+(a) Write a function that calculates all unique values of a vector without using the function `unique` nor any additional packages and name it `special`.
+
+(b) The function should return an **error** if the input is not a vector.
+
+(c) The function should return a **warning** that `"All values are special!"` if all the elements are already unique.
+
+#R22
+
+Write a function that **prints** `"I tried my best to quicksort!"` and **returns** the same input vector but with the maximum of the input vector appended as a new first element and the minimum of the input vector appended as a new last element. Thus keeping all other values where they were. So `c(2, 4, 3, 2, 8)` as input to the function should **return** a vector `c(8, 2, 4, 3, 2, 8, 2)` as well as **print** `"I tried my best to quicksort!"`.
+
+#R23
+
+```{r, eval=FALSE}
+grass <- "green"
+colorit <- function(color_me, grass_me) {
+  grass_me <- grass
+  color_me <- "blue"
+  grass <- "blue"
+  colorful_items = c(color_me, grass_me)
+  return(colorful_items)
+}
+```
+
+(a) Briefly describe what this function does.
+
+(b) What string will `grass` be assigned after running this code? Why? Remember the discussion about **global** and **local** variables.
+
+#R24
+
+First, save the `colorit` function from R23 into a new .R file. Only copy the function definition without the preceding `grass <- "green"` line!
+Second, clear `colorit` and `grass` from your workspace with `rm(list=c("colorit","grass"))`. 
+Third, use `source` to load your newly created .R file and add the `colorit` function back in your workspace.
+
+(a) Answer as a comment: Does the function work? Why or why not?
+
+Now fix the `colorit` function definition inside your newly created .R file.   
+Make sure the function gives the same output after using `source` as it did in R23.
+There should be four lines or less within the brackets of the fixed function.
+
+(b) Add a comment "# my fixed function inside the new .R file" and copy the code of your fixed function definition below
+
+#R25
+
+Find an example (or write your own example) of a simple recursive function that does something interesting. Explain what it does in a comment.
+
+### R Advanced
+
+#Radv1
+
+Read about [the infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem). See also [this important cultural video](https://www.youtube.com/watch?v=no_elVGGgW8).
+
+Create a **function** that simulates one monkey typing random letters on a typewriter in sequences of 5 letters. The simulated monkey should type 5 letters, then a space, and so on. The function should return the number of 5-letter sequences typed before making a coherent 5-letter word in a human language of your choice.
+
+To check whether a word exists, use a file that contains all English (or other human language) 5 letter words (e.g., [this one](https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt))
+
+Run your function 100 times in a **for loop**. How many 5-letter sequences are typically typed before a valid word appears? Create an informative plot.
+
+#Radv2
+
+Making functions is a central skill in programming. They allow you to think of big, complicated programs simply as a sequence of input->output steps.
+
+For this task, come up with at least two functions that you might want to re-use. A basic option is to change default plotting functions to your own versions with nicer color palettes or other aesthetic changes. You could also make "cheating" functions which you can use during the exam to look at notes or your code from the assignments.
+
+Do NOT put your newly-created function definitions into the script that you submit for this assignment. Instead, you should put them into your first, self-created R package. The internet is filled with tutorials on making R packages (e.g., <https://www.youtube.com/watch?v=47PN2VG3RmI>).
+
+The .R script submitted for this assignment should only install and load the package and briefly demo its functions. However, in order for the TAs to load your package on their laptops, your R package must be installable from the internet. Again, there are plenty of tutorials on publishing R packages (e.g., <https://www.youtube.com/watch?v=OAeucOT9jbg>). Notice that the most popular way of creating packages will require you to make a github account.
+
+### Python
+
+#Python1
+
+Create an **if statement** that prints `Go to sleep!` if the (computer's system) time is between 00:00 (12am) and 05:00 (5am), else if (`elif`) the time is between 07:00 (7am) and 11:00 (11am) it prints `Eat Breakfast!`, or otherwise (`else`) it prints `Hang out on your phone!`. We recommend using the Python module `datetime` (importing with `from datetime import datetime`), although you are not restricted to this module.
+
+#Python2
+
+Write the function `calculate_compatibility(user1, user2)` to compute a compatibility score between two dating app users based on their hobby preferences and importance.
+
+Each key in the user dictionaries has a rating (1–10) and an importance (1–10):
+
+
+`user1 = {"outdoor_activities": (8, 5), "political_discussion": (7, 9), "owning_a_snake": (8, 8)}
+user2 = {"outdoor_activities": (9, 6), "political_discussion": (8, 8), "owning_a_snake": (0, 10)}` 
+
+
+For each criterion, calculate similarity: 1 - abs(user1_rating - user2_rating) / 10.
+Multiply the similarities by the average importance of both users for that criterion.
+Return the average weighted compatibility (rounded to 2 decimals).
+
+#Python3
+
+(a) Write a **definition** that prints all unique values of a Numpy vector without using the function `np.unique` nor any additional packages other than `numpy` and name it `special()`.
+
+(b) The function should **raise an exception** if the input is not a Numpy ndarray. [See this link for more information.](https://www.w3schools.com/python/gloss_python_raise.asp)
+
+(c) The function should **give a warning** that `"All values are special!"` using the `warnings` module if all the elements in the input vector were already unique.
+
+#Python4
+
+(a) What is a `try` block in Python?
+
+(b) Write a function that 'catches' a wrong user input via try-except.
+
+#Python5
+
+Write a definition that gives the first `n` [prime numbers](https://en.wikipedia.org/wiki/Prime_number) as a numpy array.
+
+Use the following structure.
+
+```{python, eval=FALSE}
+def prime(n):
+    """
+    Returns first n prime numbers 
+    """
+    # Your code here
+    
+    return prime_numbers
+
+```
+
+#Python6
+
+Change the Docstring `"Returns first n prime numbers "` in your `prime()` definition into a more detailed message and usage about your definition (see online how to write helpful docstrings).
+
+Now place your `prime` definition into its own file called sequences.py. This is called a Python module. Now import sequences.py with this line:
+
+```{python, eval=FALSE}
+from sequences import prime
+```
+
+Now type `?prime`. What do you see? Why might you want to keep a few custom functions in their own .py file? Short comments suffice.
+
+[More help is here.](https://docs.python.org/3/tutorial/modules.html)
+
+#Python7
+
+Passwords need to be strong. Define a python function that checks whether the inputted argument constitutes a strong password. It should fulfill at least two requirements and use the `assert` statement.

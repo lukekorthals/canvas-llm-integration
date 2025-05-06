@@ -1,0 +1,241 @@
+#R1
+Subtract 0.5 points if `if`/`else` statements are not correctly translated to R syntax.
+Subtract 0.25 points if `is` is not replaced with `==` or equivalent.
+Subtract 0.25 points if `+=` is not translated to `variable <- variable + 1` or `variable = variable + 1`.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R2
+Subtract 1 point if the function is not defined with correct R syntax (e.g., `box_hist <- function(vector) { ... }`).
+Subtract 0.25 points if the function is not named `box_hist`.
+Subtract 0.25 points if the function does not accept exactly one argument.
+Subtract 0.5 points if the function does not randomly choose between a boxplot and a histogram.
+Subtract 0.5 points if the function does not produce a histogram or boxplot.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R3
+Subtract 0.25 points if the comment `# old function` or the copied function from #R2 is missing.
+Subtract 0.25 points if the comment `# new function` or the new function definition is missing.
+Subtract 0.5 points if the new function does not replicate the old function’s functionality (randomly plotting a boxplot or histogram of a numeric vector).
+Subtract 0.5 points if the new function does not reduce the number of lines compared to the old function.
+
+
+#R4
+Subtract 0.5 points if the unreachable `else if (actual == "high wind")` block is not identified and commented.
+Subtract 0.5 points if the unreachable block is not fixed (e.g., by reordering conditions or restructuring logic).
+Subtract 0.5 points if changes introduce new logical or functional errors.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R5
+Subtract 0.5 points if the student does not point out that the incorrect code only checks the first element in `my_numbers`.
+Subtract 0.5 points if the code is not corrected to test if any of `my_numbers` are less than 0 (e.g., using `any()` or similar).
+Subtract 0.25 points if the `if` statement is removed in the corrected code.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R6
+Subtract 0.5 points if the current time is not extracted correctly (e.g., `Sys.time()`, `lubridate::now()`, etc.).
+Subtract 0.25 points if the code does not check if the hour is within the intended range (e.g., 00:00–05:00; exclusive or inclusive).
+Subtract 0.5 points if the `if` statement is not implemented correctly (e.g., missing braces or incorrect syntax).
+Subtract 0.25 points if the message `Go to sleep!` is not printed when the condition is met.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R7
+Subtract 0.5 points if data is not read from a URL using an appropriate method (e.g., `read.csv()`, `readr::read_csv()`, etc.).
+Subtract 0.5 points if a new psychological construct/scale is not created by combining at least three variables in the dataframe using a valid formula (e.g., `Depletedness = 0.5 * Sadness + 0.8 * Exhausted`).
+Subtract 0.5 points if the `ifelse()` function is not used to create a boolean variable `Outlying` to classify outliers on the new construct.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R8
+Subtract 0.5 points if the first `for` loop does not correctly iterate over dataframe columns and print datatypes.
+Subtract 0.25 points if the first `for` loop does not skip `Sexual.Activity` and print "Private information" instead.
+Subtract 0.5 points if the second `for` loop does not correctly iterate over dataframe rows and print `Patient.Number` with "assessed successfully" (ignore typos in the print statement).
+Subtract 0.25 points if the second `for` loop does not check for `Authority.Respect == "NO"` and `Aggressive.Response == "YES"`, print "Assessment postponed", and exit the loop (ignore typos in the print statement).
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R9
+Subtract 0.5 points if data is not generated from a normal distribution with mean 100 and standard deviation 15, truncated at 120.
+Subtract 0.75 points if the data is generated using a package other than base R functionality.
+Subtract 0.5 points if the histogram of CO2 values is not created using `ggplot2`.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation. 
+
+
+#R10
+Subtract 0.5 points if `weird_fibonacci` is not started with `c(0, 3)` as instructed.
+Subtract 0.25 points if the `for` loop does not generate subsequent elements based on the relationship between the two previous elements.
+Subtract 0.5 points if the correct rule (Previous element + 3x Element before previous) is not identified or implemented.
+Subtract 0.25 points if the code does not generate the exact vector `c(0, 3, 3, 12, 21, 57, 120, 291, 651, 1524)`.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R11
+Subtract 0.5 points if no game name is provided.
+Subtract 0.5 points if the solution does not simulate a game of luck (the game may be biased to favour one side).
+Subtract 0.25 points if no simulation with at least 1000 iterations is run to calculate the expected payout.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R12
+Subtract 0.75 points if the fixed code does not calculate the maximum value and assign all instances of it to `maximum` (e.g., for `these_numbers`, it should be `c(5.2, 5.2)`).
+Subtract 0.5 points if `max()` is used.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R13
+Subtract 0.5 points if the `while` loop is not implemented correctly.
+Subtract 0.5 points if the time is not printed every 30 minutes.
+Subtract 0.25 points if the time is printed more than once per 30-minute interval.
+Subtract 0.25 points if the `while` loop does not run until 2040 or does not end in 2040.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation. 
+
+
+#R14
+Subtract 0.5 points if the `verhulst` function is not written in multiple lines with correct syntax.
+Subtract 0.5 points if the `for` loop is not written in multiple lines with correct syntax.
+Subtract 0.5 points if the logic of the code was changed.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R15
+Subtract 1 point if no `array` with dimensions 4 by 50 by 3 is created.
+Subtract 0.5 points if the data in each column of the array is not drawn from a normal distribution with mean equal to the column index and standard deviation of 1.
+Subtract 0.5 points if no `for` loop is used.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R16
+Subtract 0.25 points if the comment `# my 3d array from R15` is missing or the code from #R15 is not copied below it.
+Subtract 0.25 points if the comment `# calculating minimum values` is missing or the new code is not defined below it.
+Subtract 0.5 points if no function from the apply family (e.g., `apply()`, `lapply()`, etc.) is used.
+Subtract 0.25 points if more than one line of code is used to calculate minimum values.
+Subtract 0.5 points if no minimum along the first axis of the 3d array is calculated. 
+
+
+#R17
+Subtract 0.5 points if the student did not comment that `what_do` is `NULL` when `caught_fish` is "shoe".
+Subtract 0.5 points if the student did not comment that `caught_fish` can be "carp" or "perch", so `what_do` is "sell".
+Subtract 0.5 points if the student did not provide an explanation for either question. 
+
+
+#R18
+Subtract 0.5 points if the student does not mention that `rm()` removes objects.
+Subtract 0.5 points if the student does not mention that the arguments can set the scope/environment where objects are deleted.
+
+
+#R19
+Subtract 0.5 points if no vector with 100 p-values extracted from the `t_tests` list is created.
+Subtract 0.5 points if the student changes data generation of the `t_tests` list.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R20
+Subtract 0.5 points if no function is defined correctly.
+Subtract 0.5 points if `debug()` isn't used.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R21
+Subtract 1 point if no function is defined.
+Subtract 0.25 points if the function is not named "special".
+Subtract 0.5 points if the function does not calculate all unique values of an input vector.
+Subtract 0.5 points if no error is returned when a non-vector input is supplied, using a solution like `stop()`.
+Subtract 0.5 points if `warning("All values are special!")` is not used when the input vector only contains unique elements.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R22
+Subtract 1 point if no function is implemented.
+Subtract 0.5 points if the function does not print "I tried my best to quicksort!".
+Subtract 0.5 points if the function does not return the input vector with the maximum element prepended and the minimum element appended.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R23
+Subtract 0.5 points if the student does not explain that the function always returns a vector `c("blue", grass)`, where `grass` is currently `"green"`.
+Subtract 0.5 points if the student does not clarify that `grass` will remain `"green"` after running the code.
+Subtract 0.25 points if the student does not explain that within the function, `grass` is only modified in the local environment.
+
+
+#R24
+For a): Subtract 0.5 points if the student does not state that the function would not work because `grass` is undefined.
+For b): Subtract 0.25 points if the comment `# my fixed function inside the new .R file` is missing or if the `colorit` function is not copied below it.
+For b): Subtract 0.5 points if running the `colorit` function does not return a vector `c("blue", "green")`.
+For b): Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#R25
+Subtract 0.75 points if no recursive function is used or defined.
+Subtract 0.5 points if the comment is missing or does not explain what the function does. 
+
+
+#Radv1
+Subtract 1 point if no function is implemented.
+Subtract 0.25 points if the function does not generate random 5-letter sequences.
+Subtract 0.25 points if the function does not stop when a valid word is created.
+Subtract 0.25 points if the function does not return the number of attempts.
+Subtract 0.25 points if the function is not called 100 times in a `for` loop.
+Subtract 0.25 points if no informative plot is produced.
+Subtract 0.25 points for unclear or inconsistent code formatting.
+
+
+#Radv2
+Subtract 0.5 points if no custom package created by the student is installed and loaded.
+Subtract 0.5 points if no functions from the custom package are used.
+Subtract 0.25 points if only one function is used.
+Subtract 1 point if installing or using the package throws an error.
+
+
+#Python1
+Subtract 0.5 points if the current time is not extracted correctly (e.g., using `datetime.now()` or another method).
+Subtract 0.25 points if "Go to sleep!" is not printed between 00:00 and 05:00.
+Subtract 0.25 points if "Eat Breakfast!" is not printed between 07:00 and 11:00.
+Subtract 0.25 points if "Hang out on your phone!" is not printed when no other condition is met.
+Subtract 0.25 points if `if`, `elif`, and `else` are not used.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#Python2
+Subtract 1 point if no function is created.
+Subtract 0.25 points if the function name or arguments are incorrect (must be `def calculate_compatibility(user1, user2):`).
+Subtract 0.5 points if the function does not return a numerical score.
+Subtract 0.25 points if the similarity is not calculated using `1 - abs(user1_rating - user2_rating) / 10`.
+Subtract 0.25 points if the function does not calculate compatibility by multiplying similarity with average user importance.
+Subtract 0.25 points if the returned score is not the averaged compatibility, rounded to two decimals.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#Python3
+Subtract 1 point if no function is defined.
+Subtract 0.25 points if the function is not named "special".
+Subtract 0.5 points if the function does not calculate all unique values of a numpy vector without using `np.unique()` or external packages.
+Subtract 0.5 points if no exception is raised for non-numpy vector inputs.
+Subtract 0.5 points if the `warnings` package is not used to warn "All values are special!" when the vector contains only unique elements.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#Python4
+Subtract 0.5 points if the explanation of `try` blocks is incorrect or missing (can be brief).
+Subtract 0.5 points if no function with a functional `try-except` block is implemented.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#Python5
+Subtract 1 point if the function does not return the first `n` prime numbers.
+Subtract 0.25 points for unclear or inconsistent code formatting/indentation.
+
+
+#Python6
+Subtract 0.5 points if the student doesn’t mention that the docstring is shown.
+Subtract 0.5 points if the student did not provide a compelling reason for using Python modules.
+
+
+#Python7
+Subtract 1 point if no function is defined.
+Subtract 0.5 points if the function does not take a password as an argument.
+Subtract 0.5 points if the function does not check that the password meets at least two criteria.
+Subtract 0.5 points if `assert` is not used correctly.

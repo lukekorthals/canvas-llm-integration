@@ -1,0 +1,267 @@
+#R1
+#WRITE YOUR CODE INTO THIS CELL (~1 line of code below this comment)
+getwd()
+
+#R2
+#WRITE YOUR CODE INTO THIS CELL (~1 line of code)
+setwd("Documents/r_course/week_1")
+
+#R3
+#WRITE YOUR CODE INTO THIS CELL (~2 lines of code)
+list.files()
+?list.files
+
+#R4
+#WRITE YOUR CODE INTO THIS CELL (~3 lines of code + 1 comment)
+hours_sleep = 5
+reported_happiness = "3"
+hours_sleep + reported_happiness
+#cannot add it because the text is non-numeric
+
+#R5
+#WRITE YOUR CODE INTO THIS CELL (~2 new lines of comments)
+rm(list = ls())
+a <- b <- ab <- ba <- c <- 1
+#first, everything gets removed
+#then, five variables get created, each with value 1
+
+#R6
+#WRITE YOUR CODE INTO THIS CELL (~3 lines of code)
+classic_string = "Hello world."
+classic_string
+print("Hello world.")
+
+#R7
+#WRITE YOUR CODE INTO THIS CELL (~1 line of code + 1 comment)
+vec = c(2, FALSE, -1.243, "test")
+#they are all strings
+
+#R8
+#WRITE YOUR CODE INTO THIS CELL (change SECOND line of code)
+participant_ages <- c(21,26,27,19,49,NA)
+mean(participant_ages, na.rm = TRUE)
+
+#R9
+#WRITE YOUR CODE INTO THIS CELL (~3 lines of code)
+install.packages("fortunes")
+library(fortunes)
+fortune(5)
+fortunes("may") # This is an alternative solution
+
+#R10
+#WRITE YOUR CODE INTO THIS CELL (1 line of comments)
+birthday_guests <- 8
+cake_slices <- 5
+my_bool <- birthday_guests < cake_slices
+cake_slices / my_bool
+#the last line contains a division by zero
+
+#R11
+#WRITE YOUR CODE INTO THIS CELL (~2 lines of code)
+grades <- sort(sample(1:10, 100, replace = T))
+grades[c(1, 20, 80)]
+
+#R12
+#WRITE YOUR CODE INTO THIS CELL (~1 line of code)
+length(LETTERS)
+
+#R13
+#WRITE YOUR CODE INTO THIS CELL (~1 line of comments)
+letters2 = letters
+letters2 == letters
+letters2 <- letters
+letters -> letters2
+#the second line contains a test rather than an assignment
+
+#R14
+#WRITE YOUR CODE INTO THIS CELL (edit second line)
+fruits <- c("b.n.n.s",".pples")
+corrected_fruits <- gsub("\\.", "a", fruits)
+corrected_fruits <- gsub(".", "a", fruits, fixed = TRUE) # This is an alternative solution
+
+#R15
+#WRITE YOUR CODE INTO THIS CELL (~1-2 lines of code; don't edit first line)
+horrible_numbers <- factor(c("25", pi, "NA", 1))
+mean(as.numeric(as.character(horrible_numbers)), na.rm = T)
+
+#R16
+#WRITE YOUR CODE INTO THIS CELL (~4 lines of code)
+a = 4
+b = 5
+d = 70
+radians = d * pi / 180
+sqrt(a^2 + b^2 - 2*a*b * cos(radians))
+
+#R17
+#WRITE YOUR CODE INTO THIS CELL (~2 lines of code) 
+test = seq(1,100, 2)
+prod(test)
+
+#R18
+#WRITE YOUR CODE INTO THIS CELL (~3-5 lines of code)
+set.seed(42)
+rows = sample(1:10, 1)
+cols = sample(1:10, 1)
+my_matrix = matrix(NA, nrow = rows, ncol = cols) 
+my_matrix = matrix(nrow = rows, ncol = cols) # This is an alternative solution
+dim(my_matrix)
+
+#R19
+#WRITE YOUR CODE INTO THIS CELL (~1-2 lines of comments)
+set.seed(1234)
+n_subjects <- 1325
+n_vars <- 201
+EEGData1 <- matrix(runif(n_subjects*n_vars), ncol=n_vars, nrow=n_subjects)
+EEGData2 <- matrix(runif(n_subjects*n_vars), n_subjects, n_vars)
+EEGData3 <- matrix(runif(n_subjects*n_vars), n_vars, n_subjects)
+EEGData4 <- matrix(ncol=n_vars, nrow=n_subjects, data=runif(n_subjects*n_vars))
+#the third is incorrect. one either has to get the order of arguments right or provide named arguments
+
+
+#R20
+#WRITE YOUR CODE INTO THIS CELL (edit ~1 line of code) 
+set.seed(1234) 
+rows <- 20 -> cols #bad style but fun
+M <- matrix(sample(c(T, F), rows*cols, replace = T), rows, cols)
+colSums(M) 
+
+#R21
+#WRITE YOUR CODE INTO THIS CELL (~1 long line of code)
+animals_array <- array(
+  c(
+    "Cheetah", "Hyena",   
+    "Penguin", "Seal",  
+    "Rabbit", "Warthog",  
+    "Arctic Hare", "Musk Ox"
+  ),
+  dim = c(2, 2, 2),
+  dimnames = list(
+    Cuteness = c("Cute", "Not Cute"),
+    Habitat = c("Savannah", "Arctic"),
+    Diet = c("Carnivore", "Herbivore")
+  )
+)
+
+#R22
+#WRITE YOUR CODE INTO THIS CELL (~2 new lines of code)
+relationship_matrix <- matrix(c("", "L", "L", "H", "H", "L", "", "L", "H", "H", "L", NA, "", "H", "H","H", "H", "H", "", "L", NA, "H", "H", "L", ""), nrow = 5, byrow = TRUE)
+rownames(relationship_matrix) <- c("Harry", "Hermione", "Ron", "Draco", "Snape")
+colnames(relationship_matrix) <- c("Harry", "Hermione", "Ron", "Draco", "Snape")
+
+relationship_matrix[3, 2] = "L"
+relationship_matrix["Snape", "Harry"] = "H"
+
+#R23
+#WRITE YOUR CODE INTO THIS CELL (edit only last two lines of code)
+relationship_matrix <- matrix(c("", "L", "L", "H", "H", "L", "", "L", "H", "H",
+                                "L", "L", "", "H", "H","H", "H", "H", "", "L", "complicated", "H", "H", "L",""), 
+                              nrow = 5, byrow = TRUE)
+rownames(relationship_matrix) <- c("Harry", "Hermione", "Ron", "Draco", "Snape")
+colnames(relationship_matrix) <- c("Harry", "Hermione", "Ron", "Draco", "Snape")
+
+# my_diag <- diag(relationship_matrix)
+# relationship_matrix[my_diag] <- NA
+diag(relationship_matrix) <- NA
+
+
+#R24
+#WRITE YOUR CODE INTO THIS CELL (~1 line of code)
+rep(letters[1:5], each = 2)
+
+
+#R25
+#WRITE YOUR CODE INTO THIS CELL (~2-6 lines of code)
+lotr_characters <- data.frame(
+  Name = c("Gollum", "Smeagol", "Sauron", "Frodo", "Shelob", "Samwise"),
+  First_appearance = rep(c("The Hobbit", "LOTR"), each = 3),
+  Morality = rep(c("Bad", "Good"), 3),
+  Dating_appeal = seq(0,10,2)
+)
+
+#R26
+#WRITE YOUR CODE INTO THIS CELL (~1 additional line of code)
+set.seed(1234)
+students <- 50
+
+grades <- data.frame(1:students,matrix(sample(8:20,students*2,TRUE)/2,,2))
+
+names(grades) <- c('student_ID','assignment_average','exam')
+
+grades$final_grade = 0.4* grades$assignment_average + 0.6 * grades$exam
+
+#R27
+#WRITE YOUR CODE INTO THIS CELL (~1-3 lines of code)
+grades$passed = grades$final_grade >= 5.5 & grades$exam >= 5.5
+
+#R28
+#WRITE YOUR CODE INTO THIS CELL (~1 line of code)
+write.csv(InsectSprays, "mydata.csv", row.names = F)
+
+#R29
+#WRITE YOUR CODE INTO THIS CELL (~4 lines of code)
+library(statquotes)
+library(cowsay)
+quote = statquote()
+say(what = quote$text, by = "random")
+
+#R30
+#WRITE YOUR CODE INTO THIS CELL (~4 lines of code)
+df = read.csv("https://raw.githubusercontent.com/hannesrosenbusch/schiphol_class/master/Kaggle_Dataset_Mental_Disorders.csv")
+
+vec1 = df$Exhausted[df$Mood.Swing == "YES"]
+vec2 = df$Exhausted[df$Mood.Swing == "NO"]
+t.test(vec1, vec2)
+
+#Radv1
+#WRITE YOUR CODE INTO THIS CELL 
+v1 = 1:3
+v2 = rep("hi", 4)
+v3 = sample(1:4, 2)
+v4 = rnorm(3)
+class(v1)
+
+#Radv2
+#WRITE YOUR CODE INTO THIS CELL 
+mtcars[1,]
+mtcars[,"mpg"]
+mtcars[1,"mpg"]
+
+#Radv3
+#WRITE YOUR CODE INTO THIS CELL 
+install.packages("stringr")
+stringr::str_count("bananas are great", "a")
+
+#Radv4
+#WRITE YOUR CODE INTO THIS CELL 
+set.seed(123)
+df = data.frame(animals = rep(c("cat", "dog"), each = 10))
+df$IQ = (df$animals == "dog") * 8 + rnorm(nrow(df), 50, 5)
+
+#Radv5
+#WRITE YOUR CODE INTO THIS CELL 
+#first I make some missing values
+mtcars$mpg[1:3] = NA
+
+#i index logically to change the right cells
+mtcars$mpg[is.na(mtcars$mpg)] = mean(mtcars$mpg, na.rm = T)
+
+#Radv6
+#WRITE YOUR CODE INTO THIS CELL 
+book_info <- list(
+  title = "The Great Gatsby",
+  author = "F. Scott Fitzgerald",
+  year = 1925
+)
+
+# A list can store values of different types
+
+#Radv7
+#WRITE YOUR COMMENT INTO THIS CELL 
+#https://stackoverflow.com/questions/79227703/how-to-color-only-a-piece-of-a-bar-in-a-bar-plot
+#interesting because I am interested in R's plotting capabilities
+
+#Radv8
+#WRITE YOUR CODE INTO THIS CELL 
+df = read.csv("https://raw.githubusercontent.com/hannesrosenbusch/schiphol_class/master/Kaggle_Dataset_Mental_Disorders.csv")
+plot(df$Sadness)
+

@@ -1,0 +1,35 @@
+The student had to solve this task:
+<task>
+{task}
+</task>
+
+
+These are the learning goals of this task:
+<learning-goals>
+{goal}
+</learning-goals>
+
+
+Feedback this student answer:
+<student-answer>
+{answer}
+</student-answer>
+
+
+Format your response similar to this example and keep it to the point:
+<formatting-example>
+<my-thoughts>
+- The code produces ... this matches ...
+- But there is ...
+</my-thoughs>
+<feedback>Great job simulating data in R. Here are some tips for improving your code further:
+
+1. **Avoid redundant code:** Instead of `rnorm(100)` and `runif(100)`, you can define a variable holding the number of samples and reusing it. 
+    ```{r} 
+    n <- 100
+    x <- rnorm(n)
+    y <- runif(n)
+    ```  
+
+If you want to learn more about simulating data in R, consider asking the following question during the next lecture: *`From what distributions can we sample random data in R?`*</feedback>
+</formatting-example>
