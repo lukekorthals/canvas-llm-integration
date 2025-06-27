@@ -4,28 +4,25 @@ global: # global settings for the grading system and canvas course
     course_id: 12345 # enter your course ID here
   grading:
     max_grade: 10 # enter the maximum grade possible in your grading system
-  
-llm: # settings for the LLM
-  model: "gpt-4o" # enter your model name here
-  grading_temperature: 0.0 # enter temperature LLM should use for grading
-  feedback_temperature: 1.0 # enter temperature LLM should use for feedback
-  n_choices_grading: 1 # how often should the LLM grade a single submission
-  n_choices_feedback: 1 # how often should the LLM provide feedback on a single
-
-prompts: # paths to your LLM prompts
-  grading:
-    system_prompt: "resources/llm_prompts/grading/system_prompt.txt"
-    user_prompt: "resources/llm_prompts/grading/user_prompt.txt"
-  feedback:
-    system_prompt: "resources/llm_prompts/feedback/system_prompt.txt"
-    user_prompt: "resources/llm_prompts/feedback/user_prompt.txt"
-  feedback_summary:
-    system_prompt: "resources/llm_prompts/feedback_summary/system_prompt.txt"
-    user_prompt: "resources/llm_prompts/feedback_summary/user_prompt.txt"
-
-paths: # paths to various resources
-  resources: "resources" # path to where your resources such as rubrics etc. are stored
-  submissions: "submissions" # path to where your student submissions are stored
+  llm: # settings for the LLM
+    model: "gpt-4o" # enter your model name here
+    grading_temperature: 0.0 # enter temperature LLM should use for grading
+    feedback_temperature: 1.0 # enter temperature LLM should use for feedback
+    n_choices_grading: 1 # how often should the LLM grade a single submission
+    n_choices_feedback: 1 # how often should the LLM provide feedback on a single
+    prompts: # paths to your LLM prompts
+      grading:
+        system_prompt: "resources/llm_prompts/grading/system_prompt.txt"
+        user_prompt: "resources/llm_prompts/grading/user_prompt.txt"
+      feedback:
+        system_prompt: "resources/llm_prompts/feedback_questionwise/system_prompt.txt"
+        user_prompt: "resources/llm_prompts/feedback_questionwise/user_prompt.txt"
+      feedback_summary:
+        system_prompt: "resources/llm_prompts/feedback_summary/system_prompt.txt"
+        user_prompt: "resources/llm_prompts/feedback_summary/user_prompt.txt"
+  paths: # paths to various resources
+    resources: "resources" # path to where your resources such as rubrics etc. are stored
+    submissions: "submissions" # path to where your student submissions are stored
 
 assignments:
 
@@ -37,4 +34,4 @@ assignments:
       - "Do not subtract points for typos in comments."
       - "Do not subtract points for using = instead of <- in R assignments."
       - "Subtract 1 point if the student did not attempt the task."
-    lock_grades: "2025-01-13" # enter the date when grades for this assignment should be locked to avoid updating them accidentally
+    lock_grades_date: "2025-01-13" # enter the date when grades for this assignment should be locked to avoid updating them accidentally

@@ -38,7 +38,6 @@ FEEDBACK_TEMPERATURE = settings["global"]["llm"]["feedback_temperature"]
 N_CHOICES_GRADING = settings["global"]["llm"]["n_choices_grading"]
 N_CHOICES_FEEDBACK = settings["global"]["llm"]["n_choices_feedback"]
 PROMPTS = {k: read_files_to_dict(settings["global"]["llm"]["prompts"][k]) for k in settings["global"]["llm"]["prompts"].keys()}
-USE_UVA_OPENAI = settings["global"]["llm"]["use_uva_openai"]
 
 # Paths
 global RESOURCES_PATH
