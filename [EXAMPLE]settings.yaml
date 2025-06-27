@@ -30,6 +30,8 @@ assignments:
     canvas:
       assignment_id: 123456 # enter your Canvas assignment ID here
       quiz_id: 123456 # enter your Canvas quiz ID here
+      r_quiz_question_id: 1234567 # this is specific to the PIPS course, you probably want to change the grading logic inside refactor.ipynb
+      adv_quiz_question_id: 1234567 # this is specific to the PIPS course, you probably want to change the grading logic inside refactor.ipynb
     global_rubrics: # enter global rubrics that should be applied to all questions in this assignment
       - "Do not subtract points for typos in comments."
       - "Do not subtract points for using = instead of <- in R assignments."
