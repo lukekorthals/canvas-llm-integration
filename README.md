@@ -35,8 +35,8 @@ conda env create -f environment.yaml
 4. Copy the `[EXAMPLE]settings.yaml` file and rename it to `settings.yaml`.
 Enter all relevant information in the `settings.yaml` file.
 
-  Note that assignments in our course had one question pertaining to R and one question pertaining to advanced R / Python. 
   > [!CAUTION]
+  > Note that assignments in our course had one question pertaining to R and one question pertaining to advanced R / Python. 
   > The `r_quiz_question_id` and `adv_quiz_question_id` are used to identify these subquestions and update the points scored by the student accordingly. 
   > You probably have a different setup and want to change the grading logic inside the `refactor.ipynb` notebook.
 
