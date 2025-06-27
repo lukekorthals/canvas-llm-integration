@@ -26,16 +26,16 @@ variables:
   OPENAI_BASE_URL: ENTER_YOUR_URL
 ```
 
-3. Create a virtual environment from the `environment.yml` file:
+3. Create a virtual environment from the `environment.yaml` file:
 
 ```bash 
-conda env create -f environment.yml
+conda env create -f environment.yaml
 ```
 
-4. Copy the `[EXAMPLE]settings.yml` file and rename it to `settings.yml`.
-Enter all relevant information in the `settings.yml` file.
+4. Copy the `[EXAMPLE]settings.yaml` file and rename it to `settings.yaml`.
+Enter all relevant information in the `settings.yaml` file.
 
-5. Open the `refactor.ipynb`notebook and set the `ASSIGNMENT_NUMBER` to the number corresponding to the number in  the `settings.yml` for the assignment you want to grade.
+5. Open the `refactor.ipynb`notebook and set the `ASSIGNMENT_NUMBER` to the number corresponding to the number in  the `settings.yaml` for the assignment you want to grade.
 
 ```yaml
 assignments:
