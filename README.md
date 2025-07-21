@@ -1,7 +1,7 @@
 # canvas-llm-integration
 Integrating the Canvas LMS with the OpenAI API for automated grading and feedback. 
 
-I piloted this pipeline in a programming course in January 2025. The associated paper "AI grading and feedback - Insights from a programming course" was accepted to the [late breaking results track at AIED 2025](https://aied2025.itd.cnr.it/index.php/program/accepted-papers/late-breaking-results/).
+I piloted this pipeline in a programming course in January 2025. The associated paper "AI grading and feedback - Insights from a programming course" was accepted to the [late breaking results track at AIED 2025](https://aied2025.itd.cnr.it/index.php/program/accepted-papers/late-breaking-results/). A 20 minute talk I gave at the VU Amsterdam is available on [YouTube](https://www.youtube.com/watch?v=UA-vX2UqO2Q&pp=ygUNbHVrZSBrb3J0aGFscw%3D%3D).
 
 # Quick Start
 
