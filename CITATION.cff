@@ -1,0 +1,74 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Grading University Students with LLMs: Performance and Acceptance of a Canvas-Based Automation"
+authors:
+  - family-names: "Korthals"
+    given-names: "Luke"
+  - family-names: "Rosenbusch"
+    given-names: "Henning"
+  - family-names: "Grasman"
+    given-names: "Raoul"
+  - family-names: "Visser"
+    given-names: "Ingmar"
+date-released: "2025-06-01"
+doi: "10.1007/978-3-031-99264-3_5"
+url: "https://doi.org/10.1007/978-3-031-99264-3_5"
+type: conference-paper
+conference:
+  name: "Artificial Intelligence in Education (AIED 2025)"
+  location: "Palermo, Italy"
+  date-start: "2025-06-01"
+  date-end: "2025-06-05"
+publisher:
+  name: "Springer"
+  place: "Cham"
+collection-title: "Communications in Computer and Information Science"
+volume: "2591"
+editors:
+  - family-names: "Cristea"
+    given-names: "Alexandra I."
+  - family-names: "Walker"
+    given-names: "Erik"
+  - family-names: "Lu"
+    given-names: "Yuanchun"
+  - family-names: "Santos"
+    given-names: "Osmar C."
+  - family-names: "Isotani"
+    given-names: "Seiji"
+
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: "Korthals"
+      given-names: "Luke"
+    - family-names: "Rosenbusch"
+      given-names: "Henning"
+    - family-names: "Grasman"
+      given-names: "Raoul"
+    - family-names: "Visser"
+      given-names: "Ingmar"
+  title: "Grading University Students with LLMs: Performance and Acceptance of a Canvas-Based Automation"
+  collection-title: "Communications in Computer and Information Science"
+  volume: "2591"
+  editors:
+    - family-names: "Cristea"
+      given-names: "Alexandra I."
+    - family-names: "Walker"
+      given-names: "Erik"
+    - family-names: "Lu"
+      given-names: "Yuanchun"
+    - family-names: "Santos"
+      given-names: "Osmar C."
+    - family-names: "Isotani"
+      given-names: "Seiji"
+  conference:
+    name: "Artificial Intelligence in Education (AIED 2025)"
+    location: "Palermo, Italy"
+    date-start: "2025-06-01"
+    date-end: "2025-06-05"
+  publisher:
+    name: "Springer"
+    place: "Cham"
+  year: 2025
+  doi: "10.1007/978-3-031-99264-3_5"
+  url: "https://doi.org/10.1007/978-3-031-99264-3_5"
